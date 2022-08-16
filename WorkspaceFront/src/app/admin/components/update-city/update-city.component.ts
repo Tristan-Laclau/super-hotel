@@ -25,7 +25,7 @@ export class UpdateCityComponent implements OnInit {
     this.myForm = this.formBuilder.group({
    id : [0],
    name : ['',Validators.required],
-   department : ['',Validators.required],
+   country : ['',Validators.required],
     
     });
     }
@@ -38,7 +38,7 @@ export class UpdateCityComponent implements OnInit {
         this.myForm.setValue({
           id : this.city.id,
           name : this.city.name,
-          department:this.city.department
+          country:this.city.country
         })
       }
     })

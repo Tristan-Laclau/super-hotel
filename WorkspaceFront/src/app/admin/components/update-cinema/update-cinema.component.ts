@@ -62,7 +62,7 @@ export class UpdateCinemaComponent implements OnInit {
     // });
   }
 
-  // onSaveCinema(myForm: FormGroup){
+   onSaveCinema(myForm: FormGroup){
   //   if (myForm.valid) {
   //     const cinemaData = new FormData();
   //     let address = new Address(
@@ -85,7 +85,7 @@ export class UpdateCinemaComponent implements OnInit {
   //       complete: () => this.router.navigateByUrl("/adminCinema")
   //     });
   //   }
-  // }
+   }
 
 
 }

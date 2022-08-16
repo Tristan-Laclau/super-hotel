@@ -20,11 +20,11 @@ export class SaveCityComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,private cityService : CityService, private router : Router, private route : ActivatedRoute) {
   
-    this.city = new City(0,"",0);
+    this.city = new City(0,"","");
     this.myForm = this.formBuilder.group({
    id : [this.city.id],
    name : [this.city.name,Validators.required],
-   department : [this.city.department,Validators.required],
+   country : [this.city.country,Validators.required],
     
     });
     }
@@ -34,7 +34,7 @@ export class SaveCityComponent implements OnInit {
 
   onSaveCity(form : FormGroup){
     if(form.valid){
-     this.cityService.postCity({name:form.value.name,department:form.value.department}).subscribe({
+     this.cityService.postCity({name:form.value.name,country:form.value.country}).subscribe({
       next : (data) => console.log(data),  
       error : (err) => this.error = err.message,
       complete : () => this.router.navigateByUrl('adminCities')

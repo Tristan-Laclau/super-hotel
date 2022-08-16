@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Address } from 'src/app/model/address';
 import { Hotel } from 'src/app/model/hotel.model';
 import { City } from 'src/app/model/city.model';
 import { HotelService } from '../../services/hotel.service';
@@ -11,7 +10,7 @@ import { HotelService } from '../../services/hotel.service';
   styleUrls: ['./delete-cinema.component.css']
 })
 export class DeleteCinemaComponent implements OnInit {
-  cinema: Hotel = new Hotel(0,'',new Address('','','','',''),new City(0,'',0),[]);
+  cinema: Hotel = new Hotel(0,'','','','',0,0,new City(0,'',''));
   displayForm: boolean = true;
   
 
@@ -28,7 +27,7 @@ export class DeleteCinemaComponent implements OnInit {
     console.log(id);
     this.cinemaService.getOneHotel(id).subscribe({
       next: (data) => {
-        this.cinema=data
+        //this.cinema=data
       }
     });
   }

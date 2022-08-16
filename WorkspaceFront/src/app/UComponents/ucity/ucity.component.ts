@@ -13,7 +13,7 @@ import { City } from 'src/app/model/city.model';
 })
 export class UcityComponent implements OnInit {
 listCities : City[] | undefined;
-listCinemas : Hotel[]|undefined;
+listHotels : Hotel[]|undefined;
 error = null;
  
  
@@ -35,7 +35,7 @@ getAllCity(){
 }
 getAllCinema(){
   this.cinemaService.getHotels().subscribe({
-    next :(data) => (this.listCinemas = data, console.log(data)),
+    next :(data) => (this.listHotels = data, console.log(data)),
     error : (err) => this.error = err.message,
     complete : () => this.error = null
   })

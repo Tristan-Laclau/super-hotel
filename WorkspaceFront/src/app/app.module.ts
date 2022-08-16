@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UCinemaComponent } from './UComponents/ucinema/ucinema.component';
@@ -13,12 +14,12 @@ import { LoginComponent } from './UComponents/login/login.component';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { CityComponent } from './admin/components/city/city.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
-import { MovieComponent } from './admin/components/movie/movie.component';
 import { SaveCityComponent } from './admin/components/save-city/save-city.component';
 import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.component';
 import { UpdateCinemaComponent } from './admin/components/update-cinema/update-cinema.component';
 import { DeleteCinemaComponent } from './admin/components/delete-cinema/delete-cinema.component';
 import { UpdateCityComponent } from './admin/components/update-city/update-city.component';
+import { UhotelComponent } from './UComponents/uhotel/uhotel.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +32,16 @@ import { UpdateCityComponent } from './admin/components/update-city/update-city.
     LoginComponent,
     AdminHomeComponent,
     CityComponent,
-    MovieComponent,
     SaveCityComponent,
     SaveCinemaComponent,
     UpdateCinemaComponent,
     DeleteCinemaComponent,
+    UhotelComponent,
     UpdateCityComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,

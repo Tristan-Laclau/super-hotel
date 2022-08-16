@@ -28,17 +28,17 @@
 							<thead >
 								<tr>
 									<th>City</th>
-									<th>Department</th>
-									<th>Name of cinemas</th>
+									<th>Country</th>
+									<th>Name of hotels</th>
 									<th>Selection</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr *ngFor="let city of listCities">
 									<td >{{city.name}}</td>
-									<td >{{city.department}}</td>
-									<td><ul *ngFor="let cinema of listCinemas" >
-										<li *ngIf="city.id==cinema.city.id">{{cinema.name}}</li>
+									<td >{{city.country}}</td>
+									<td><ul *ngFor="let hotel of listHotels" >
+										<li *ngIf="city.id==hotel.city.id">{{hotel.name}}</li>
 									</ul></td>
 									<td>
 										<a class="btn btn-success" (click)="onSelect(city.id)"> SELECT</a>
