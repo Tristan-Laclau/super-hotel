@@ -1,0 +1,104 @@
+<div class="mt-5 container-fluid">
+  <div class="card text-center">
+    <div class="card-header">
+      <div class="row g-2 justify-content-center p-2">
+        <div class="col-3">
+          <a
+            href="#"
+            class="w-100 btn btn-dark text-white btn-block"
+            routerLink="/adminCities"
+            >Cities</a
+          >
+        </div>
+        <div class="col-3">
+          <a
+            href="#"
+            class="w-100 btn btn-dark text-white btn-block"
+            routerLink="/adminCinema"
+            >Cinemas</a
+          >
+        </div>
+        <div class="col-3">
+          <a
+            href="#"
+            class="w-100 btn btn-dark text-white btn-block"
+            routerLink="/adminMovies"
+            >Movies</a
+          >
+        </div>
+        <div class="col-3">
+          <a
+            th:href="#"
+            class="w-100 btn btn-dark text-white btn-block"
+            routerLink="/adminSessions"
+            >Sessions</a
+          >
+        </div>
+        <div class="col-3">
+          <a
+            th:href="#"
+            class="w-100 btn btn-dark text-white btn-block"
+            routerLink="/adminFC"
+            >Film Classification</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-2 mt-5">
+      <div class="col mb-5 d-flex justify-content-center"  *ngFor="let m of listMovies$ |async; let i = index">
+        <div class="card">
+            <div *ngIf=imageOfMovie>
+                <img [src]="imageOfMovie[i]" class="card-img-top" alt="..." />
+            </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item h3" >{{ m.title }}</li>
+              <li
+                class="list-group-item"
+                th:text="'SYNOPSY : '"
+              >{{ m.description }}</li>
+              <li
+                class="list-group-item"
+                th:text="'PRODUCTION : '"
+              >{{ m.production }}</li>
+              <li
+                class="list-group-item"
+                th:text="'RELEASE DATE : '"
+              >{{ m.releaseDate }}</li>
+              <li
+                class="list-group-item"
+                th:text="'CLASSIFICATION : '"
+              >{{ m.category.name }}</li>
+              <li
+                class="list-group-item"
+                th:text="'DURATION: '"
+              >{{ m.duration }}</li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card-body d-flex justify-content-between">
+              <a
+                th:href="@{ /movies(page=${currentPage}, size=${size}, id=${m.id}) }"
+                onclick="return confirm('Are you sure?')"
+                ><i class="fas fa-trash-alt"></i
+              ></a>
+              <a th:href="@{ /updateMovieForm(id=${m.id}) }"
+                ><i class="fas fa-edit"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted d-flex justify-content-center">
+      
+      <div>
+        <a routerLink="/saveMovie" class="btn btn-primary btn-lg"
+          >Add new Movie</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
