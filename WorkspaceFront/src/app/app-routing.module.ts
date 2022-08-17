@@ -13,6 +13,7 @@ import { LoginComponent } from './UComponents/login/login.component';
 import { UCinemaComponent } from './UComponents/ucinema/ucinema.component';
 import { UcityDetailsComponent } from './UComponents/ucity-details/ucity-details.component';
 import { UcityComponent } from './UComponents/ucity/ucity.component';
+import { UhotelDetailsComponent } from './UComponents/uhotel-details/uhotel-details.component';
 import { UhotelComponent } from './UComponents/uhotel/uhotel.component';
 import { UmoviesComponent } from './UComponents/umovies/umovies.component';
 
@@ -34,6 +35,7 @@ const routes: Routes = [
 {path : 'updateCity/:id',component:UpdateCityComponent},
 {path : 'cinemas/:keyWord',component:UCinemaComponent},
 {path : 'cityDetails/:cityId',component:UcityDetailsComponent},
+{path : 'hotelDetails/:hotelId',component:UhotelDetailsComponent},
 
     { path: '**', redirectTo: '/404'}
 ];

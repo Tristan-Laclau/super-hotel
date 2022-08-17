@@ -20,6 +20,7 @@ import { UpdateCinemaComponent } from './admin/components/update-cinema/update-c
 import { DeleteCinemaComponent } from './admin/components/delete-cinema/delete-cinema.component';
 import { UpdateCityComponent } from './admin/components/update-city/update-city.component';
 import { UhotelComponent } from './UComponents/uhotel/uhotel.component';
+import { UhotelDetailsComponent } from './UComponents/uhotel-details/uhotel-details.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UhotelComponent } from './UComponents/uhotel/uhotel.component';
     UpdateCinemaComponent,
     DeleteCinemaComponent,
     UhotelComponent,
-    UpdateCityComponent
+    UpdateCityComponent,
+    UhotelDetailsComponent
   ],
   imports: [
     BrowserModule,

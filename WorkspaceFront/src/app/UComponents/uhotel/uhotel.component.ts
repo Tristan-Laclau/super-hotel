@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HotelService } from 'src/app/admin/services/hotel.service';
 import { Hotel } from 'src/app/model/hotel.model';
 
@@ -10,12 +10,12 @@ import { Hotel } from 'src/app/model/hotel.model';
 })
 export class UhotelComponent implements OnInit {
   listHotel: Hotel[] | undefined;
-  keyWord : string ='';
   error = null;
 
   constructor(
     private hotelService : HotelService,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private router : Router
   ) { }
 
   // ngOnInit(): void {
@@ -31,35 +31,20 @@ export class UhotelComponent implements OnInit {
   // }
 
   ngOnInit(): void{
-    this.keyWord = this.route.snapshot.params['keyWord'];
-
     this.getAllHotels();
   }
 
   getAllHotels() {
-    if(this.keyWord){
-
-    this.hotelService.getHotelByKeyWord(this.keyWord).subscribe({
-      next:(data)=>{this.ngOnInit();
-        this.listHotel=data},
+    this.hotelService.getHotels().subscribe({
+      next:(data)=>{this.listHotel=data},
       error:(err)=>this.error=err.message,
       complete:()=>this.error=null,
 
-    })}
+    })
+  }
 
-    else{
-      this.hotelService.getHotels().subscribe({
-        next:(data)=>{this.ngOnInit();
-
-          this.listHotel=data},
-  
-        error:(err)=>this.error=err.message,
-  
-        complete:()=>this.error=null,
-
-      })
-    }
-
+  onSelect(id : number){
+    this.router.navigateByUrl("/hotelDetails/"+ id);
   }
 
 }
