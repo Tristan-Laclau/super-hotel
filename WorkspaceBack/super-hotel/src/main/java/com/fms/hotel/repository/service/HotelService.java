@@ -20,4 +20,6 @@ public interface HotelService {
 
     public List<Hotel> getHotelByCityId(Long id);
 
+    public List<Hotel> getHotelByCountry(String country);
+
 }

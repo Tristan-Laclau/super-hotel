@@ -28,7 +28,7 @@ ngOnInit(): void{
   onSearch(myForm : FormGroup){
     if(myForm.valid){
       this.keyWord = myForm.value.keyWord;
-      this.router.navigateByUrl('/cinemas/'+this.keyWord);
+      this.router.navigateByUrl('/hotelByCountry/'+this.keyWord);
     }
 
   }

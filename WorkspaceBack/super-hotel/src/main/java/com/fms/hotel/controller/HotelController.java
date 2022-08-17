@@ -51,4 +51,7 @@ public class HotelController {
     public List<Hotel> getHotelByCityId(@PathVariable("id")Long id){
         return hotelService.getHotelByCityId(id);
     }
+
+    @GetMapping("/getByCountry/{country}")
+    public List<Hotel> getHotelByCountry(@PathVariable("country")String country){return hotelService.getHotelByCountry(country);}
 }

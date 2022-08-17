@@ -10,6 +10,7 @@ import { Hotel } from 'src/app/model/hotel.model';
 })
 export class UhotelComponent implements OnInit {
   listHotel: Hotel[] | undefined;
+  keyWord: String ='';
   error = null;
 
   constructor(
@@ -32,6 +33,16 @@ export class UhotelComponent implements OnInit {
 
   ngOnInit(): void{
     this.getAllHotels();
+    this.route.params.subscribe(routeParams => {this.getHotelByCountry(routeParams['keyWord'])});
+
+  }
+
+  getHotelByCountry(keyWord : string){
+    this.hotelService.getHotelByCountry(keyWord).subscribe({
+      next:(data)=>(this.listHotel=data),
+      error:(err)=>this.error=err.message,
+      complete:()=>this.error=null
+    })
   }
 
   getAllHotels() {

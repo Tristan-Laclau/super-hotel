@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { CinemaComponent } from './admin/components/cinema/cinema.component';
@@ -36,6 +36,7 @@ const routes: Routes = [
 {path : 'cinemas/:keyWord',component:UCinemaComponent},
 {path : 'cityDetails/:cityId',component:UcityDetailsComponent},
 {path : 'hotelDetails/:hotelId',component:UhotelDetailsComponent},
+{path : 'hotelByCountry/:keyWord',component:UhotelComponent},
 
     { path: '**', redirectTo: '/404'}
 ];

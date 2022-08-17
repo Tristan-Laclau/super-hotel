@@ -41,4 +41,9 @@ export class HotelService {
   public getHotelByCityId(cityId : number){
     return this.http.get<Hotel[]>(environment.host+"/hotel/getByCityId/"+ cityId);
   }
+
+  public getHotelByCountry(country : string){
+    return this.http.get<Hotel[]>(environment.host+"/hotel/getByCountry/"+ country);
+  }
+  
 }
