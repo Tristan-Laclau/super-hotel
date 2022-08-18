@@ -27,7 +27,7 @@ error = null;
   }
 getAllCity(){
   this.cityService.getCity().subscribe({
-    next : (data) => (this.listCities = data) ,
+    next : (data) => {this.listCities = data, console.log(data)} ,
     error : (err) => this.error = err.message,
     complete : () => this.error = null
     

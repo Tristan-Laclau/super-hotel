@@ -15,60 +15,18 @@
     </div>
   </nav>
 </div>
-<div class="container">
-	<div class="card-body">
-				
-					<div class="row g-3">
-						<div class="col-6 ">
-							<h3 th:text="${listOf}"></h3>
+	<div class="container">
+		<div class = "row">
+					<div class="col-md-3 mx-auto my-5" *ngFor="let city of listCities">
+					  <div class="card bg-light" style="width: 20rem; height: 20 rem;">
+						  <div class="card-body">
+							  <h5 class="card-title"> {{city.name}}</h5>
+							  <p class="card-text">{{city.country}}</p>
+							  <div class="card-img" style="background-image:url('{{city.picture}}')" (click)="onSelect(city.id)"></div>
+							  <!-- <img src="{{hotel.picture}}" class="img-fluid" alt="A beautiful picture of {{hotel.name}}"> -->
+							  <!-- <a class="btn btn-success" (click)="onSelect(hotel.id)">SELECT</a> -->
+						  </div>
 						</div>
-						<table class="mt-2 table table-striped table-bordered table-success ">
-							<thead >
-								<tr>
-									<th>City</th>
-									<th>Country</th>
-									<th>Name of hotels</th>
-									<th>Selection</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr *ngFor="let city of listCities">
-									<td >{{city.name}}</td>
-									<td >{{city.country}}</td>
-									<td><ul *ngFor="let hotel of listHotels" >
-										<li *ngIf="city.id==hotel.city.id">{{hotel.name}}</li>
-									</ul></td>
-									<td>
-										<a class="btn btn-success" (click)="onSelect(city.id)"> SELECT</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<!-- <div>
-						<nav aria-label="...">
-							<ul class="pagination justify-content-center">
-								<li th:class="${currentPage==0 ? 'page-item disabled' : 'page-item'} ">
-									<a class="page-link"
-										th:href="@{/myCity(page=${currentPage-1}, size=${size}, keyWord=${keyWord} ) }">Previous</a>
-								</li>
-								<li th:each="page,status:${pages}"><a
-										th:class="${status.index==currentPage?'btn btn-primary':'btn'  }"
-										th:href="@{ /myCity(page=${status.index}, size=${size}, keyWord=${keyWord}) }"
-										th:text="${status.index }"></a></li>
-								<li class="page-item"><a class="page-link"
-										th:href="@{ /myCity(page=${currentPage+1}, size=${size}, keyWord=${keyWord} )}">Next</a>
-								</li>
-								<li class="page-item"><a class="page-link"
-										th:href="@{/myCity(page=${totalPages-1}, size=${size}, keyWord=${keyWord} )}">Last</a>
-								</li>
-							</ul>
-						</nav>
-					</div> -->
-					
-
-
-
+					  </div>
+					  </div>
 		</div>
-		
-	</div>
