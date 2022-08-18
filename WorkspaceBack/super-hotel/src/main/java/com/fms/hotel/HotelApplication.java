@@ -40,7 +40,7 @@ public class HotelApplication implements CommandLineRunner {
 		this.hotelService.addHotel(new Hotel(null,"Gentleman & Cie","55904339","20 Baker Street","5 stars",3,100,"https://th.bing.com/th/id/R.d7691b6934b096b015b64cf01e9c0d38?rik=hgWD%2bDqJJlZNxw&pid=ImgRaw&r=0",null,london));
 		this.hotelService.addHotel(new Hotel(null,"Amour, gloire et beauté","0613204496","Ici c'est Paris","5 stars",41,1199.99,"https://www.e-architect.com/wp-content/uploads/2018/08/lutetia-hotel-paris-building-t220818-4.jpg",null,paris));
 
-		this.hotelService.addHotel(new Hotel(null,"Hotel California","3344055022","Eagles Street","4 stars",445,50,"https://th.bing.com/th/id/R.a1280b3fdf53e83afcbc1db96a75a67e?rik=1LlvAQ%2baArDjGQ&pid=ImgRaw&r=0",null,newyork));
+		this.hotelService.addHotel(new Hotel(null,"Hotel California","3344055022","Eagles Street","4 stars",445,50,"https://th.bing.com/th/id/R.7a303c042f34528202dabeee3254a706?rik=Q89%2fJ%2bJcgwwwxA&pid=ImgRaw&r=0&sres=1&sresct=1",null,newyork));
 		this.hotelService.addHotel(new Hotel(null,"Mi casa es tu casa","443456090","345 por aqui","no stars",2,1,"https://thumbs.dreamstime.com/b/maison-espagnole-avec-le-conseil-de-pueblo-17929289.jpg",null,bilbao));
 		this.hotelService.addHotel(new Hotel(null,"Le mirador","0621040760","195 Allée des Alaoudes","6 stars",4,9999.99,"https://th.bing.com/th/id/R.3b49c6058de0d33af8f0a8f4a4faee98?rik=fPykrhhrRz5R%2bw&pid=ImgRaw&r=0",null,bayonne));
 		this.hotelService.addHotel(new Hotel(null,"Chez Vlad","N/A","Somewhere in the middle of nowhere","5 stars",2,20,"https://maison-monde.com/wp-content/uploads/2015/12/maison-traditionnelle-roumanie-7.jpg",null,baiamare));
