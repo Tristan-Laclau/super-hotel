@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { City } from 'src/app/model/city.model';
 import { CityService } from '../../services/city.service';
 
@@ -12,7 +13,7 @@ export class AdminHomeComponent implements OnInit {
   listCities : City[] | undefined;
   error = null;
   
-    constructor(private cityService : CityService) {}
+    constructor(private cityService : CityService, private router : Router) {}
   
     ngOnInit(): void {
       this.getAllCity();
@@ -25,4 +26,13 @@ export class AdminHomeComponent implements OnInit {
       
     })
   }
+
+  onUpdateCity(id : number){
+    this.router.navigateByUrl('/updateCity/'+id);
+  }
+
+  onDeleteCity(id : number){
+    this.router.navigateByUrl('/deleteCity/'+ id);
+  }
+
   }

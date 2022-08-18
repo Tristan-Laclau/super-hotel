@@ -28,7 +28,7 @@ export class CityComponent implements OnInit {
   }
   onDeleteCity(city : City){
     if(confirm("vous êtes sur de vouloir supprimer cette City")){
-      this.cityService.delCity(city).subscribe({
+      this.cityService.deleteCity(city.id).subscribe({
         next : (data) => console.log(data),
         error: (err) => (this.error = err.message),
         complete : () =>  window.location.reload()

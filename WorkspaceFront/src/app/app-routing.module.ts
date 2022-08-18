@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { AdminHotelComponent } from './admin/components/admin-hotel/admin-hotel.component';
+import { DeleteCityComponent } from './admin/components/delete-city/delete-city.component';
 import { DeleteHotelComponent } from './admin/components/delete-hotel/delete-hotel.component';
 import { SaveCityComponent } from './admin/components/save-city/save-city.component';
 import { SaveHotelComponent } from './admin/components/save-hotel/save-hotel.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
 {path : 'adminHome',component:AdminHomeComponent},
 {path : 'saveCity',component:SaveCityComponent},
 {path : 'updateCity/:id',component:UpdateCityComponent},
+{path : 'deleteCity/:id',component:DeleteCityComponent},
 {path : 'cityDetails/:cityId',component:UcityDetailsComponent},
 {path : 'hotelDetails/:hotelId',component:UhotelDetailsComponent},
 {path : 'hotelByCountry/:keyWord',component:UhotelComponent},

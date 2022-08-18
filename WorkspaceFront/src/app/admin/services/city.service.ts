@@ -20,7 +20,7 @@ public postCity(city : any){
 public getCityById(id : number){
   return this.http.get<City>(environment.host+"/city/get/"+ id);
 }
-public delCity(city : City){
-  return this.http.delete(environment.host+"/city/delete/"+city.id);
+public deleteCity(id : number){
+  return this.http.delete(environment.host+"/city/delete/"+id);
 }
 }
