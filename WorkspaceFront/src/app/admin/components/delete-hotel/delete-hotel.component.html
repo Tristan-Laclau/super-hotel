@@ -5,37 +5,37 @@
 			</div>
 			<div class="card-body">
 
-                    <div class="form-group mb-3" *ngIf="hotel.id">
+                    <div class="form-group mb-3">
 						<label class="control-label">Id : {{hotel.id}}</label>
 					</div>
 
-					<div class="form-group mb-3" *ngIf="hotel.name">
-						<label class="control-label">{{hotel.name}}</label>
+					<div class="form-group mb-3">
+						<label class="control-label">Name : {{hotel.name}}</label>
 					</div>
                     
-					<div class="form-group mb-3" *ngIf="hotel.phone">
-						<label class="control-label">{{hotel.phone}}</label>
+					<div class="form-group mb-3">
+						<label class="control-label">Phone number : {{hotel.phone}}</label>
 					</div>
 
-					<div class="form-group mb-3" *ngIf="hotel.address">
-						<label class="control-label">{{hotel.address}}</label>
+					<div class="form-group mb-3">
+						<label class="control-label">Address : {{hotel.address}} - {{hotel.city.name}}</label>
 					</div>
 
-					<div class="form-group mb-3" *ngIf="hotel.rating">
-						<label class="control-label">{{hotel.rating}}</label>
+					<div class="form-group mb-3">
+						<label class="control-label">Rating : {{hotel.rating}}</label>
 					</div>
 
-					<div class="form-group mb-3" *ngIf="hotel.availableRooms">
-						<label class="control-label">{{hotel.availableRooms}}</label>
+					<div class="form-group mb-3">
+						<label class="control-label">Number of rooms : {{hotel.availableRooms}}</label>
 					</div>
 
-					<div class="form-group mb-3" *ngIf="hotel.price">
-						<label class="control-label">{{hotel.price}}</label>
+					<div class="form-group mb-3">
+						<label class="control-label">Starting price : {{hotel.price}}</label>
 					</div>
 
-					<button (click)="deleteHotel(hotel.id)" class="btn btn-warning" onclick="return confirm('Are you sure?')">Delete</button>
+					<button (click)="deleteHotel(hotel.id)" class="btn btn-warning">Delete</button>
 
-                    <button routerLink="/adminHotel" class="btn btn-success">Cancel</button>
+                    <button (click)="cancel()" class="btn btn-success">Cancel</button>
 
 			</div>
 		</div>

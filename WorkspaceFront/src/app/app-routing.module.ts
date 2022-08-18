@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
 import { AdminHotelComponent } from './admin/components/admin-hotel/admin-hotel.component';
+import { DeleteHotelComponent } from './admin/components/delete-hotel/delete-hotel.component';
 import { SaveCityComponent } from './admin/components/save-city/save-city.component';
 import { SaveHotelComponent } from './admin/components/save-hotel/save-hotel.component';
 import { UpdateCityComponent } from './admin/components/update-city/update-city.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
 {path : 'hotelDetails/:hotelId',component:UhotelDetailsComponent},
 {path : 'hotelByCountry/:keyWord',component:UhotelComponent},
 {path : 'updateHotel/:id',component: UpdateHotelComponent},
+{path : 'deleteHotel/:id', component: DeleteHotelComponent},
 {path : 'saveHotel', component : SaveHotelComponent},
 
     { path: '**', redirectTo: '/404'}
