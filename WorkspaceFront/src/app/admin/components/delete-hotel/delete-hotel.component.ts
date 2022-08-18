@@ -10,7 +10,7 @@ import { HotelService } from '../../services/hotel.service';
   styleUrls: ['./delete-hotel.component.css']
 })
 export class DeleteHotelComponent implements OnInit {
-  hotel: Hotel = new Hotel(0,'','','','',0,0,new City(0,'',''));
+  hotel: Hotel = new Hotel(0,'','','','',0,0,'',new City(0,'','',''));
   displayForm: boolean = true;
   
 

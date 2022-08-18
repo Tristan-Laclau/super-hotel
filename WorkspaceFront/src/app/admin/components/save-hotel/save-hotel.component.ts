@@ -53,7 +53,8 @@ export class SaveHotelComponent implements OnInit {
           form.value.rating,
           form.value.availableRooms,
           form.value.price,
-          new City(form.value.city,'','')
+          '',
+          new City(form.value.city,'','','')
       );
       this.hotelService.addHotel(this.hotel).subscribe({
         next: (data) => console.log('ok'),

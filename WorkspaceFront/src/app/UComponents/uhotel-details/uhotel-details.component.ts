@@ -10,8 +10,8 @@ import { Hotel } from 'src/app/model/hotel.model';
   styleUrls: ['./uhotel-details.component.css']
 })
 export class UhotelDetailsComponent implements OnInit {
-city : City = {id: 0,name: '',country:''};
-hotel : Hotel = {id:0,name:'',phone:'',address:'',rating:'',availableRooms:0,price:0,city: this.city};
+city : City = {id: 0,name: '',country:'',picture:''};
+hotel : Hotel = {id:0,name:'',phone:'',address:'',rating:'',availableRooms:0,price:0,picture:'',city: this.city};
 error = null;
 
   constructor(private hotelService : HotelService, private route : ActivatedRoute) { }

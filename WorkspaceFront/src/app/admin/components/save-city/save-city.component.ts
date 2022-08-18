@@ -20,7 +20,7 @@ export class SaveCityComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,private cityService : CityService, private router : Router, private route : ActivatedRoute) {
   
-    this.city = new City(0,"","");
+    this.city = new City(0,'','','');
     this.myForm = this.formBuilder.group({
    id : [this.city.id],
    name : [this.city.name,Validators.required],

@@ -71,7 +71,8 @@ export class UpdateHotelComponent implements OnInit {
       rating:form.value.rating,
       availableRooms:form.value.availableRooms,
       price:form.value.price,
-      city:new City(form.value.city,'','')
+      picture : '',
+      city:new City(form.value.city,'','','')
     };
      this.hotelService.updateHotel(form.value.id, newHotel).subscribe({
       next : (data) => console.log(data),  

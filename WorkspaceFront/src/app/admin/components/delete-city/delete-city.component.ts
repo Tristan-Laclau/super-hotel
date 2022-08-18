@@ -9,7 +9,7 @@ import { CityService } from '../../services/city.service';
   styleUrls: ['./delete-city.component.css']
 })
 export class DeleteCityComponent implements OnInit {
-  city : City = new City(0,'','');
+  city : City = new City(0,'','','');
   displayForm: boolean = true;
   
 

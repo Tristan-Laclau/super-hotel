@@ -29,7 +29,7 @@
           <p class="card-text"> AvailableRooms : {{hotel.availableRooms}}</p>
           <p class="card-text"> Starting price : {{hotel.price}}</p>
           <div class="card-footer">
-            <a href="#" class="btn btn-success">See available rooms</a>
+            <a class="btn btn-success">See available rooms</a>
           </div>
         </div>
       </div>
@@ -39,8 +39,8 @@
             <div class="card bg-light" style="width: 40rem;">
                 <div class="card-body">
                     <h5 class="card-title"> A look at {{hotel.name}}</h5>
-                    <p class="card-text"> Disclaimer : not really {{hotel.name}}</p>
-                    <img src="https://hotel-cotebasque.fr/upload/page/5ed7a0f68b97160d9c6e82cf/files/l-hotel-cote-basque_size_1920-16-9.jpg" class="img-fluid" alt="...">
+                    <p class="card-text"> Disclaimer : product may differ</p>
+                    <img src="{{hotel.picture}}" class="img-fluid" alt="A beautiful picture of {{hotel.name}}">
                 </div>
                 </div>
         

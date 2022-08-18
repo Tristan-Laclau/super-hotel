@@ -24,6 +24,8 @@ public class City implements Serializable {
     private String name;
     private String country;
 
+    private String picture;
+
 
     @OneToMany(mappedBy = "city", fetch = FetchType.EAGER)
     @JsonIgnore

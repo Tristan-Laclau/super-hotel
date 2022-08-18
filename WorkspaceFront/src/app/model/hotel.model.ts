@@ -9,6 +9,7 @@ export class Hotel {
   rating : string;
   availableRooms : number;
   price : number;
+  picture : string;
   city: City;
 
   constructor(
@@ -19,6 +20,7 @@ export class Hotel {
     rating : string,
     availableRooms: number,
     price: number,
+    picture : string,
     city: City
   ) {
     this.id = id;
@@ -29,5 +31,6 @@ export class Hotel {
     this.rating=rating;
     this.availableRooms=availableRooms;
     this.price=price;
+    this.picture=picture;
   }
 }

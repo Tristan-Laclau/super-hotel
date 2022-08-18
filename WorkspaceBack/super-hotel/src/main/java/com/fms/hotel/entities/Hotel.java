@@ -28,6 +28,8 @@ public class Hotel implements Serializable {
     private int availableRooms;
     private double price;
 
+    private String picture;
+
     @OneToOne
     private Image imageModel;
     @ManyToOne()
