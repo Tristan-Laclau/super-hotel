@@ -46,7 +46,7 @@ export class UpdateCityComponent implements OnInit {
 
   onSaveCity(form : FormGroup){
     if(form.valid){
-     this.cityService.postCity({id:form.value.id,name:form.value.name,department:form.value.department}).subscribe({
+     this.cityService.postCity({id:form.value.id,name:form.value.name,country:form.value.country}).subscribe({
       next : (data) => console.log(data),  
       error : (err) => this.error = err.message,
       complete : () => this.router.navigateByUrl('adminCities')

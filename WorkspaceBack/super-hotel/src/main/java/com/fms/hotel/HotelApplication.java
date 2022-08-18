@@ -15,7 +15,6 @@ public class HotelApplication implements CommandLineRunner {
 
 	@Autowired
 	CityServiceImpl cityService;
-
 	@Autowired
 	HotelServiceImpl hotelService;
 
@@ -31,6 +30,8 @@ public class HotelApplication implements CommandLineRunner {
 		City newyork = this.cityService.add(new City(null,"New-York","USA",null));
 		City london = this.cityService.add(new City(null,"London","England",null));
 		City paris = this.cityService.add(new City(null,"Paris","France",null));
+
+
 
 		this.hotelService.addHotel(new Hotel(null,"La cruche percée","0610203040","14 Boulevard de la gare","5 stars",100,170,null,bayonne));
 		this.hotelService.addHotel(new Hotel(null,"La casa de papel","0690807060","90 Calle fuerte","2 stars",40,20,null,bilbao));

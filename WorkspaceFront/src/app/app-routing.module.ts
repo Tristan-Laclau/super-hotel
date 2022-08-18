@@ -1,42 +1,34 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminHomeComponent } from './admin/components/admin-home/admin-home.component';
-import { CinemaComponent } from './admin/components/cinema/cinema.component';
-import { CityComponent } from './admin/components/city/city.component';
-import { DeleteCinemaComponent } from './admin/components/delete-cinema/delete-cinema.component';
-import { SaveCinemaComponent } from './admin/components/save-cinema/save-cinema.component';
+import { AdminHotelComponent } from './admin/components/admin-hotel/admin-hotel.component';
 import { SaveCityComponent } from './admin/components/save-city/save-city.component';
-import { UpdateCinemaComponent } from './admin/components/update-cinema/update-cinema.component';
+import { SaveHotelComponent } from './admin/components/save-hotel/save-hotel.component';
 import { UpdateCityComponent } from './admin/components/update-city/update-city.component';
+import { UpdateHotelComponent } from './admin/components/update-hotel/update-hotel.component';
 import { HomeComponent } from './UComponents/home/home.component';
 import { LoginComponent } from './UComponents/login/login.component';
-import { UCinemaComponent } from './UComponents/ucinema/ucinema.component';
 import { UcityDetailsComponent } from './UComponents/ucity-details/ucity-details.component';
 import { UcityComponent } from './UComponents/ucity/ucity.component';
 import { UhotelDetailsComponent } from './UComponents/uhotel-details/uhotel-details.component';
 import { UhotelComponent } from './UComponents/uhotel/uhotel.component';
-import { UmoviesComponent } from './UComponents/umovies/umovies.component';
 
 const routes: Routes = [
 {path : 'home', component : HomeComponent},
 {path:'',component:HomeComponent},
-{path : 'cinemas', component : UCinemaComponent},
 {path : 'hotels', component: UhotelComponent},
-{path : 'movies', component:UmoviesComponent},
 {path : 'cities', component : UcityComponent},
 {path : 'login',component :LoginComponent},
-{path : 'adminCinema',component:CinemaComponent},
-{path : 'adminCities',component:CityComponent},
-{path : 'saveCinema',component:SaveCinemaComponent},
+{path : 'adminHotel',component:AdminHotelComponent},
+{path : 'adminCities',component:AdminHomeComponent},
 {path : 'adminHome',component:AdminHomeComponent},
 {path : 'saveCity',component:SaveCityComponent},
-{path : 'updateCinema/:id',component:UpdateCinemaComponent},
-{path : 'deleteCinema/:id',component:DeleteCinemaComponent},
 {path : 'updateCity/:id',component:UpdateCityComponent},
-{path : 'cinemas/:keyWord',component:UCinemaComponent},
 {path : 'cityDetails/:cityId',component:UcityDetailsComponent},
 {path : 'hotelDetails/:hotelId',component:UhotelDetailsComponent},
 {path : 'hotelByCountry/:keyWord',component:UhotelComponent},
+{path : 'updateHotel/:id',component: UpdateHotelComponent},
+{path : 'saveHotel', component : SaveHotelComponent},
 
     { path: '**', redirectTo: '/404'}
 ];

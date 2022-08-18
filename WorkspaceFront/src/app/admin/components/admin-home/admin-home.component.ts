@@ -19,7 +19,7 @@ export class AdminHomeComponent implements OnInit {
     }
   getAllCity(){
     this.cityService.getCity().subscribe({
-      next : (data) => (this.listCities = data,console.log(data)) ,
+      next : (data) => (this.listCities = data) ,
       error : (err) => this.error = err.message,
       complete : () => this.error = null
       

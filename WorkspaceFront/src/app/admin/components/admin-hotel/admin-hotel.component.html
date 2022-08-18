@@ -21,26 +21,34 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>NAME</th>
+                                <th>PHONE</th>
+                                <th>ADDRESS</th>
+                                <th>RATING</th>
+                                <th>AVAILABLE ROOMS</th>
+                                <th>PRICE</th>
                                 <th>CITY</th>
-                                <th>COUNTRY</th>
                                 <th>DELETE</th>
                                 <th>UPDATE</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let city of listCities">
-                                <td >{{city.id}}</td>
-                                <td >{{city.name}}</td>
-                                <td >{{city.country}}</td>
-                                
-                                
+                            <tr *ngFor="let hotel of listHotel">
+                                <td>{{hotel.id}}</td>
+                                <td>{{hotel.name}}</td>
+                                <td>{{hotel.phone}}</td>
+                                <td>{{hotel.address}}</td>
+                                <td>{{hotel.rating}}</td>
+                                <td>{{hotel.availableRooms}}</td>
+                                <td>{{hotel.price}}</td>
+                                <td>{{hotel.city.name}}</td>
                                 <td>
-                                    <a th:href="@{ admin(page=${currentPage}, size=${size}, id=${c.id}) }"
+                                <a th:href="@{ admin(page=${currentPage}, size=${size}, id=${hotel.id}) }"
                                         onclick="return confirm('Are you sure?')"><i
                                             class="fas fa-trash-alt"></i></a>
                                 </td>
                                 <td>
-                                    <a th:href="@{ admin/updateCityForm(id=${c.id}) }"><i
+                                    <a th:href="@{ admin/updateHotelForm(id=${hotel.id}) }"><i
                                             class="fas fa-edit"></i></a>
                                 </td>
                             </tr>
@@ -48,7 +56,7 @@
                     </table>
                 </div>
                 <div class="card-footer text-muted">
-                    <a href="#" class="btn btn-secondary btn-lg"routerLink="/saveCity">Add new city</a>
+                    <a href="#" class="btn btn-secondary btn-lg"routerLink="/saveHotel">Add new hotel</a>
                 </div>
             </div>
         </section>
