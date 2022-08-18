@@ -32,17 +32,19 @@ export class UhotelComponent implements OnInit {
   // }
 
   ngOnInit(): void{
-    this.getAllHotels();
     this.route.params.subscribe(routeParams => {this.getHotelByCountry(routeParams['keyWord'])});
-
   }
 
   getHotelByCountry(keyWord : string){
+    if(keyWord){
     this.hotelService.getHotelByCountry(keyWord).subscribe({
       next:(data)=>(this.listHotel=data),
       error:(err)=>this.error=err.message,
       complete:()=>this.error=null
     })
+  }else{
+    this.getAllHotels();
+  }
   }
 
   getAllHotels() {

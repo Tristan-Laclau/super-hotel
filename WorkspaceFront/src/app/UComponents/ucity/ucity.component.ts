@@ -18,11 +18,11 @@ error = null;
  
  
 
-  constructor(private cityService : CityService,private cinemaService : HotelService, private router : Router) {}
+  constructor(private cityService : CityService,private hotelService : HotelService, private router : Router) {}
 
   ngOnInit(): void {
     this.getAllCity();
-    this.getAllCinema();
+    this.getAllHotel();
 
   }
 getAllCity(){
@@ -33,8 +33,8 @@ getAllCity(){
     
   })
 }
-getAllCinema(){
-  this.cinemaService.getHotels().subscribe({
+getAllHotel(){
+  this.hotelService.getHotels().subscribe({
     next :(data) => (this.listHotels = data, console.log(data)),
     error : (err) => this.error = err.message,
     complete : () => this.error = null

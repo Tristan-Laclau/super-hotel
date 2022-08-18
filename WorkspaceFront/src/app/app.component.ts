@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
   myForm : FormGroup;
 
   constructor(private formBuilder : FormBuilder,
-    private cinemaService : HotelService,
+    private hotelService : HotelService,
     private router : Router){
     this.myForm = this.formBuilder.group({
       keyWord :[this.keyWord]
