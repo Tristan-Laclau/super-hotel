@@ -35,12 +35,12 @@
                                 
                                 
                                 <td>
-                                    <a th:href="@{ admin(page=${currentPage}, size=${size}, id=${c.id}) }"
+                                    <a 
                                         onclick="return confirm('Are you sure?')"><i
                                             class="fas fa-trash-alt"></i></a>
                                 </td>
                                 <td>
-                                    <a th:href="@{ admin/updateCityForm(id=${c.id}) }"><i
+                                    <a ><i
                                             class="fas fa-edit"></i></a>
                                 </td>
                             </tr>
@@ -48,7 +48,7 @@
                     </table>
                 </div>
                 <div class="card-footer text-muted">
-                    <a href="#" class="btn btn-secondary btn-lg"routerLink="/saveCity">Add new city</a>
+                    <a href="#" class="btn btn-success btn-lg"routerLink="/saveCity">Add new city</a>
                 </div>
             </div>
         </section>

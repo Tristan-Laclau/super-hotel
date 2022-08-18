@@ -23,6 +23,7 @@ import { UhotelComponent } from './UComponents/uhotel/uhotel.component';
 import { UhotelDetailsComponent } from './UComponents/uhotel-details/uhotel-details.component';
 import { UcityDetailsComponent } from './UComponents/ucity-details/ucity-details.component';
 import { AdminHotelComponent } from './admin/components/admin-hotel/admin-hotel.component';
+import { UpdateHotelComponent } from './admin/components/update-hotel/update-hotel.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AdminHotelComponent } from './admin/components/admin-hotel/admin-hotel.
     UpdateCityComponent,
     UhotelDetailsComponent,
     UcityDetailsComponent,
-    AdminHotelComponent
+    AdminHotelComponent,
+    UpdateHotelComponent
   ],
   imports: [
     BrowserModule,

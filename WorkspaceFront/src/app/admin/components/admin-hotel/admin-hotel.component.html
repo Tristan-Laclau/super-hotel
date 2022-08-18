@@ -43,12 +43,11 @@
                                 <td>{{hotel.price}}</td>
                                 <td>{{hotel.city.name}}</td>
                                 <td>
-                                <a th:href="@{ admin(page=${currentPage}, size=${size}, id=${hotel.id}) }"
-                                        onclick="return confirm('Are you sure?')"><i
+                                <a (click)="onDeleteHotel(hotel.id)"><i
                                             class="fas fa-trash-alt"></i></a>
                                 </td>
                                 <td>
-                                    <a th:href="@{ admin/updateHotelForm(id=${hotel.id}) }"><i
+                                    <a (click)="onUpdateHotel(hotel.id)"><i
                                             class="fas fa-edit"></i></a>
                                 </td>
                             </tr>
@@ -56,7 +55,7 @@
                     </table>
                 </div>
                 <div class="card-footer text-muted">
-                    <a href="#" class="btn btn-secondary btn-lg"routerLink="/saveHotel">Add new hotel</a>
+                    <a href="#" class="btn btn-success btn-lg"routerLink="/saveHotel">Add new hotel</a>
                 </div>
             </div>
         </section>

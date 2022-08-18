@@ -49,9 +49,8 @@ export class UpdateCityComponent implements OnInit {
      this.cityService.postCity({id:form.value.id,name:form.value.name,country:form.value.country}).subscribe({
       next : (data) => console.log(data),  
       error : (err) => this.error = err.message,
-      complete : () => this.router.navigateByUrl('adminCities')
+      complete : () => this.router.navigateByUrl('adminHome')
     });
-    console.log(this.city);
     }
   }
 }

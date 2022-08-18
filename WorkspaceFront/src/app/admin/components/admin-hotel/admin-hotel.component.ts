@@ -23,7 +23,7 @@ export class AdminHotelComponent implements OnInit {
     }
   getAllHotel(){
     this.hotelService.getHotels().subscribe({
-      next : (data) => (this.listHotel = data,console.log(data)) ,
+      next : (data) => (this.listHotel = data) ,
       error : (err) => this.error = err.message,
       complete : () => this.error = null
       
@@ -31,11 +31,11 @@ export class AdminHotelComponent implements OnInit {
   }
 
   onUpdateHotel(id : number){
-    this.router.navigateByUrl('/updateCinema/'+id);
+    this.router.navigateByUrl('/updateHotel/'+id);
   }
 
   onDeleteHotel(id : number){
-    this.router.navigateByUrl('/deleteCinema/'+ id);
+    this.router.navigateByUrl('/deleteHotel/'+ id);
   }
 
   }

@@ -30,8 +30,8 @@ export class HotelService {
     return this.http.delete<Hotel>(environment.host+ '/hotel/delete/' + id);
   }
 
-  public updateHotel(id: number, hotelData: FormData){
-    return this.http.put<Hotel>(environment.host+'/hotel/update/'+id, hotelData);
+  public updateHotel(id: number, hotel : Hotel){
+    return this.http.put<Hotel>(environment.host+'/hotel/update/'+id, hotel);
   }
 
   public getHotelByKeyWord(keyWord : string){
