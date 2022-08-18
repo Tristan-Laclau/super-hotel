@@ -1,1 +1,41 @@
-<p>delete-hotel works!</p>
+
+		<div class="card text-center">
+			<div class="card-header">
+				<h5 class="card-title">Delete this hotel?</h5>
+			</div>
+			<div class="card-body">
+
+                    <div class="form-group mb-3" *ngIf="hotel.id">
+						<label class="control-label">Id : {{hotel.id}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="hotel.name">
+						<label class="control-label">{{hotel.name}}</label>
+					</div>
+                    
+					<div class="form-group mb-3" *ngIf="hotel.phone">
+						<label class="control-label">{{hotel.phone}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="hotel.address">
+						<label class="control-label">{{hotel.address}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="hotel.rating">
+						<label class="control-label">{{hotel.rating}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="hotel.availableRooms">
+						<label class="control-label">{{hotel.availableRooms}}</label>
+					</div>
+
+					<div class="form-group mb-3" *ngIf="hotel.price">
+						<label class="control-label">{{hotel.price}}</label>
+					</div>
+
+					<button (click)="deleteHotel(hotel.id)" class="btn btn-warning" onclick="return confirm('Are you sure?')">Delete</button>
+
+                    <button routerLink="/adminHotel" class="btn btn-success">Cancel</button>
+
+			</div>
+		</div>
