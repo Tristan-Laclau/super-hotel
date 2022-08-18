@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HotelService } from 'src/app/admin/services/hotel.service';
 import { Hotel } from 'src/app/model/hotel.model';
 
@@ -9,29 +9,32 @@ import { Hotel } from 'src/app/model/hotel.model';
   styleUrls: ['./ucity-details.component.css']
 })
 export class UcityDetailsComponent implements OnInit {
-  listCinema : Hotel[] | undefined;
+  listHotel : Hotel[] | undefined;
   error = null;
   cityId = 1;
 
-  constructor(private cinemaService : HotelService,
-    private route : ActivatedRoute) { }
+  constructor(private hotelService : HotelService,
+    private route : ActivatedRoute,
+    private router : Router) { }
 
   ngOnInit(): void {
   this.cityId = this.route.snapshot.params['cityId'];
-  this.getCinemaByCity(this.cityId);
-  
+  this.getHotelByCityId(this.cityId);
   }
 
-  getCinemaByCity(id : number){
+  getHotelByCityId(id : number){
 
     if(id){
-    this.cinemaService.getHotelByCityId(id).subscribe({
-      next:(data)=>(this.listCinema=data),
+    this.hotelService.getHotelByCityId(id).subscribe({
+      next:(data)=>(this.listHotel=data),
   
       error:(err)=>this.error=err.message,
   
       complete:()=>this.error=null,
       });
+      }
     }
+      onSelect(id : number){
+        this.router.navigateByUrl("/hotelDetails/"+ id);
       }
     }
